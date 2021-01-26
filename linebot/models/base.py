@@ -61,7 +61,7 @@ class Base(object):
 
         :rtype: str
         """
-        return json.dumps(self.as_json_dict(), sort_keys=True)
+        return json.dumps(self.as_json_dict(), sort_keys=True, ensure_ascii=False)
 
     def as_json_dict(self):
         """Return dictionary from this object.
